@@ -1,0 +1,17 @@
+{
+  "name": "NodejsWebApp",
+  "version": "1.0.0",
+  "description": "Nodejs Web application sample",
+  "main": "NodejsWebApp.js",
+  "author": {
+    "name": "DuoCode",
+    "email": "info@duoco.de"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "express-partials": "^0.3.0",
+    "express-pjax": "0.0.1",
+    "pjax": "^0.1.4"
+  }
+}
