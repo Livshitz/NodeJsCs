@@ -45,3 +45,4 @@ node_modules
 obj
 bin
 packages
+bower_components

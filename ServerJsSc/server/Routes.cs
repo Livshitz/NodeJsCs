@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DuoCode.Runtime;
 
 namespace NodejsWebApp
 {
@@ -18,6 +19,14 @@ namespace NodejsWebApp
 			RoutesDefinitions.Add("/test", new Action<dynamic, dynamic>((req, res) => {
 				res.send("Hello TESTTTT");
 				Console.WriteLine("/test");
+			}));
+
+			RoutesDefinitions.Add("/*.cs", new Action<dynamic, dynamic>((req, res) => {
+				dynamic path = Js.require<dynamic>("path");
+
+				var fileName = path.basename(req.path);
+                res.sendfile(path.resolve("../ClientJsCs/" + fileName));
+				//res.send(fileName);
 			}));
 		}
 	}

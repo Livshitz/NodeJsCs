@@ -59,6 +59,13 @@ $d.define(NodejsWebApp.Routes, null, function($t, $p) {
             res.send("Hello TESTTTT");
             System.Console.WriteLine$10("/test");
         }, this));
+
+        $t.RoutesDefinitions.Add$1("/*.cs", $d.delegate(function(req, res) {
+            var path = require("path");
+
+            var fileName = path.basename(req.path);
+            res.sendfile(path.resolve("../ClientJsCs/" + $d.toString(fileName)));
+        }, this));
     };
 });
 $d.define(NodejsWebApp.Server, null, function($t, $p) {
@@ -93,14 +100,16 @@ $d.define(NodejsWebApp.Server, null, function($t, $p) {
         app.use(require("stylus").middleware(path.join(__dirname, "public")));
         //app.use(express.@static(path.join(__dirname, "public")));
 
+        // catch 404 and forward to error handler
         /*
-			// catch 404 and forward to error handler
 			app.use(new Action<dynamic, dynamic, dynamic>((req, res, next) =>{
 				dynamic err = Js.@new("Error", "Not Found");
 				err.status = 404;
 				next(err);
 			}));
 			*/
+
+        express.static.mime.define({ 'text/plain': ['cs'] });
 
         var http = require("http");
         var hostName = "127.0.0.1";

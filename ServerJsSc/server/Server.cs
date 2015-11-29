@@ -12,7 +12,7 @@ namespace NodejsWebApp
 		{
 			Js.debugger();
 
-            dynamic express = Js.require<dynamic>("express");
+			dynamic express = Js.require<dynamic>("express");
 			dynamic path = Js.require<dynamic>("path");
 			dynamic body_parser = Js.require<dynamic>("body-parser");
 			dynamic partials = Js.require<dynamic>("express-partials");
@@ -21,7 +21,7 @@ namespace NodejsWebApp
 			dynamic logger = Js.require<dynamic>("morgan");
 			dynamic cookieParser = Js.require<dynamic>("cookie-parser");
 
-            string __dirname = path.resolve(path.dirname()); ;
+			string __dirname = path.resolve(path.dirname()); ;
 			Console.WriteLine("__dirname = " + __dirname);
 
 			var app = express();
@@ -29,9 +29,9 @@ namespace NodejsWebApp
 			app.set("views", __dirname + "/views");
 			app.set("view engine", "jade");
 			app.use(body_parser());
-			app.use(body_parser.urlencoded(new{ extended="true" })); // parse application/x-www-form-urlencoded
+			app.use(body_parser.urlencoded(new { extended = "true" })); // parse application/x-www-form-urlencoded
 			app.use(body_parser.json()); // parse application/json
-			app.use(body_parser.json(new{ type="application/vnd.api+json" })); // parse application/vnd.api+json as json
+			app.use(body_parser.json(new { type = "application/vnd.api+json" })); // parse application/vnd.api+json as json
 			app.use(partials());
 			app.use(pjax());
 
@@ -40,14 +40,16 @@ namespace NodejsWebApp
 			app.use(Js.require<dynamic>("stylus").middleware(path.join(__dirname, "public")));
 			//app.use(express.@static(path.join(__dirname, "public")));
 
-			/*
 			// catch 404 and forward to error handler
+			/*
 			app.use(new Action<dynamic, dynamic, dynamic>((req, res, next) =>{
 				dynamic err = Js.@new("Error", "Not Found");
 				err.status = 404;
 				next(err);
 			}));
 			*/
+
+			express.@static.mime.define(Js.reference("{ 'text/plain': ['cs'] }"));
 
 			var http = Js.require<Http>("http");
 			const string hostName = "127.0.0.1";

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerJsSc", "ServerJsSc\Se
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodeServer", "NodeServer\NodeServer.njsproj", "{767A0405-EDBD-455F-8452-AC7069B90168}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientJsCs", "ClientJsCs\ClientJsCs.csproj", "{732661B6-2A27-488A-B5B1-EA2F2D575139}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{767A0405-EDBD-455F-8452-AC7069B90168}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{767A0405-EDBD-455F-8452-AC7069B90168}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{767A0405-EDBD-455F-8452-AC7069B90168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{732661B6-2A27-488A-B5B1-EA2F2D575139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{732661B6-2A27-488A-B5B1-EA2F2D575139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{732661B6-2A27-488A-B5B1-EA2F2D575139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{732661B6-2A27-488A-B5B1-EA2F2D575139}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

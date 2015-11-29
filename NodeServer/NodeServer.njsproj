@@ -32,12 +32,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="public\js\ClientJsCs.js" />
+    <Compile Include="public\js\mscorlib.min.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
     <Compile Include="server\mscorlib.js" />
     <Compile Include="server\mscorlib.min.js" />
     <Compile Include="server\server.js" />
     <Compile Include="www.js" />
+    <Content Include="bower.bowerrc" />
+    <Content Include="bower.json" />
     <Content Include="package.json" />
     <Content Include="public\css\style.css" />
     <Content Include="public\css\style.styl" />
@@ -51,6 +55,7 @@
   <ItemGroup>
     <Folder Include="bin\" />
     <Folder Include="public\" />
+    <Folder Include="public\bower_components\**\*.*" />
     <Folder Include="public\css\" />
     <Folder Include="public\img\" />
     <Folder Include="public\js\" />

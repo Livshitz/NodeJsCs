@@ -2,7 +2,22 @@
 html(lang='en', ng-app="myApp", ng-controller="layout")
     head
         title= title
+        script(src='/bower_components/angular/angular.js')
+        script(src='/bower_components/angular-animate/angular-animate.js')
+        script(src='/bower_components/angular-aria/angular-aria.js')
+        script(src='/bower_components/angular-material/angular-material.js')
+        link(rel='stylesheet', href='/bower_components/angular-material/angular-material.css')
+        script(src='/js/mscorlib.min.js')
+        
         link(rel='stylesheet', href='/css/style.css')
-    body
+    //(onload="ClientJsCs.Program.Main()")
+    body 
         div#main
+            div {{text}}
             != body
+
+
+    script(src='/js/ClientJsCs.js')
+    script.
+       ClientJsCs.Program.Main() 
+
